@@ -53,7 +53,6 @@ class Menu extends React.Component {
 			})
 				.then((res) => res.json())
 				.then((val) => {
-					console.log(val);
 					this.setState({ results: val.res });
 				});
 		}
@@ -89,7 +88,7 @@ class Menu extends React.Component {
 				{this.state.results.length &&
 					this.state.results.map((item, index) => {
 						return (
-							<div className="prod-container">
+							<div className="prod-container" key={item._id}>
 								<img
 									src={`../${item.picture}`}
 									alt="Product Image"
@@ -99,7 +98,7 @@ class Menu extends React.Component {
 									<h3 className="prod-name">{item.name}</h3>
 									<div className="prod-tags">
 										{item.tags.map((item) => (
-											<p className="prod-tag">
+											<p className="prod-tag" key={item}>
 												{`${
 													item
 														.charAt(0)

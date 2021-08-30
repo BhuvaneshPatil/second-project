@@ -123,3 +123,7 @@
 [30/8/2021 -- 16:17]  Sass ran on files
 [30/8/2021 -- 16:17]  Sass ran on files
 [30/8/2021 -- 16:18]  Sass ran on files
+[30/8/2021 -- 22:25]  Info task started
+[30/8/2021 -- 22:48]  Scripts ran on main.js
+[30/8/2021 -- 22:49]  Scripts ran on main.js
+[30/8/2021 -- 22:49]  Scripts ran on main.js
