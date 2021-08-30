@@ -65,7 +65,9 @@ class Menu extends React.Component {
 	 * @returns JSX
 	 * @memberof App
 	 */
+	// function to render list
 	renderList() {
+		// if user input is empty
 		if (this.state.inputStr.length < 1) {
 			return (
 				<p className="notification-text">
@@ -73,6 +75,7 @@ class Menu extends React.Component {
 				</p>
 			);
 		}
+		// if there are are no result for given input
 		if (this.state.results.length === 0) {
 			return (
 				<p className="notification-text">
@@ -80,6 +83,7 @@ class Menu extends React.Component {
 				</p>
 			);
 		}
+		// displaying results for given string
 		return (
 			<>
 				{this.state.results.length &&

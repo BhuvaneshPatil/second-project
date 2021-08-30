@@ -29,6 +29,7 @@ const express = require("express");
 const cors = require("cors");
 const { json } = require("body-parser");
 const app = express();
+// to avoid CORS issue
 app.use(cors());
 app.use(
 	express.urlencoded({
@@ -45,7 +46,11 @@ app.use(express.json());
  * The Request object 'req' represents the request to the server.
  * The ServerResponse object 'res' represents the writable stream back to the client.
  */
+
+// function where searching takes place
 function searchData(str) {
+	// this function returns t an array which contains the elements which satisfies the condition
+	// that if the str (input) is substring of given item , we use toLowerCase() to avoid case sensitivity
 	return data.filter(
 		(item) => item.name.toLowerCase().indexOf(str.toLowerCase()) > -1
 	);
